@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1172.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.ReceptionController">
+   <children>
+      <ImageView fitHeight="671.0" fitWidth="1063.0" layoutX="109.0" layoutY="-4.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assest/main-qimg-4f28cde3a5aed1163cb32b0da9082f6b-c.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="6.0" prefHeight="766.0" prefWidth="656.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="141.0" fitWidth="135.0" layoutX="5.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest/logo.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="-7.0" prefHeight="56.0" prefWidth="671.0" style="-fx-background-color: red;" text="Reception">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <JFXTextField fx:id="cusNametxt" focusColor="#f50f07" labelFloat="true" layoutX="22.0" layoutY="224.0" onAction="#reqAddress" prefHeight="29.0" prefWidth="308.0" promptText="Customer Name">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tptxt" focusColor="#f50f07" labelFloat="true" layoutX="405.0" layoutY="224.0" onAction="#reqQTY" prefHeight="39.0" prefWidth="246.0" promptText="TP">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="addresstxt" focusColor="#f50f07" labelFloat="true" layoutX="22.0" layoutY="288.0" onAction="#reqTP" prefHeight="29.0" prefWidth="362.0" promptText="Address">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="qtytxt" focusColor="#f50f07" labelFloat="true" layoutX="405.0" layoutY="297.0" onKeyReleased="#wernHignQty" prefHeight="29.0" prefWidth="201.0" promptText="QTY">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXTextField>
+            <TableView fx:id="OrdersTable" layoutY="485.0" onMouseClicked="#TableClick" prefHeight="233.0" prefWidth="639.0">
+              <columns>
+                <TableColumn prefWidth="155.00003051757812" text="Cus NAme" />
+                  <TableColumn prefWidth="113.0" text="Status" />
+                  <TableColumn prefWidth="158.0" text="Chef" />
+                  <TableColumn prefWidth="212.0" text="deliver" />
+              </columns>
+            </TableView>
+            <JFXTextField fx:id="receptionNametxt" focusColor="#363739" labelFloat="true" layoutX="360.0" layoutY="88.0" prefHeight="32.0" prefWidth="256.0" promptText="Receptionist Name">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="pizzatypesCombo" layoutX="360.0" layoutY="174.0" prefHeight="31.0" prefWidth="256.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="addOrderbtn" layoutX="679.0" layoutY="692.0" onAction="#addOrders" prefHeight="45.0" prefWidth="201.0" style="-fx-background-color: red;" text="Add Order" textFill="#fcf9f9">
+         <font>
+            <Font name="Arial Unicode MS" size="21.0" />
+         </font>
+      </JFXButton>
+      <AmbientLight color="CHARTREUSE" lightOn="true" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="543.0" style="-fx-border-color: red;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewController.ReceptionistLoginController">
+   <children>
+      <Label layoutX="116.0" layoutY="46.0" prefHeight="45.0" prefWidth="295.0" text="Receptionist Loging">
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#b92c2c" />
+                  <Stop color="#2c2a2a" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="nameText" focusColor="#ee131a" labelFloat="true" layoutX="79.0" layoutY="164.0" onAction="#requesPw" prefHeight="29.0" prefWidth="339.0" promptText="User Name" unFocusColor="#282323">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="logBtn" layoutX="338.0" layoutY="391.0" onAction="#login" prefHeight="48.0" prefWidth="176.0" style="-fx-background-color: red;" text="Loging" textFill="#e8e4e4">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="passwordText" focusColor="#ee131a" labelFloat="true" layoutX="87.0" layoutY="277.0" onAction="#login" prefHeight="29.0" prefWidth="339.0" promptText="password" unFocusColor="#282323">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
